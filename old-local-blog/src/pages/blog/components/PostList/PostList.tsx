@@ -2,10 +2,12 @@ import PostItem from '../PostItem'
 import { useSelector, useDispatch } from 'react-redux'
 import { RootState } from 'store'
 import { deletePost, startEditingPost } from 'pages/blog/blog.reducer'
+import { useEffect } from 'react'
 
 export default function PostList() {
   const postList = useSelector((state: RootState) => state.blog.postList)
   const dispatch = useDispatch()
+
   const handleDelete = (postId: string) => {
     dispatch(deletePost(postId))
   }

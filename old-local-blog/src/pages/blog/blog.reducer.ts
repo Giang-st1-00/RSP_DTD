@@ -20,6 +20,7 @@ export const addPost = createAction('blog/addPost', function (post: Omit<Post, '
     }
   }
 })
+
 export const deletePost = createAction<string>('blog/deletePost')
 export const startEditingPost = createAction<string>('/blog/startEditingPost')
 export const cancelEditingPost = createAction('/blog/cancelEditingPost')
